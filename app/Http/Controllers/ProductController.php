@@ -6,7 +6,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function getData() {
-        echo 'Vào trang sản phẩm thành công';
+        echo 'Vào trang sản phẩm thành công - 2';
         die('ok');
         $data = Product::all()->toArray();
         echo '<pre>';

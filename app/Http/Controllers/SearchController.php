@@ -16,7 +16,7 @@ class SearchController extends Controller
         if (!empty($query)) {
             $results = User::where('name', 'like', "%$query%")->get(); // Thay 'column_name' bằng tên cột bạn muốn tìm kiếm
         }
-        
+        // note
 
         return view('search.results', compact('results'));
     }
