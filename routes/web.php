@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,5 +37,6 @@ Route::post('/store-multi-data', [DemoController::class, 'storeMultipleData']);
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
+Route::get('/products', [ProductController::class, 'getData']);
 
 
