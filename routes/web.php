@@ -35,3 +35,6 @@ Route::get('/demo', [DemoController::class, 'demo']);
 Route::post('/store-multi-data', [DemoController::class, 'storeMultipleData']);
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+
+
