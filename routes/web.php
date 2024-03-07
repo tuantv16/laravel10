@@ -3,7 +3,10 @@
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RoleManagementController;
+use App\Http\Controllers\ScreenTestController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\UserManagementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,3 +43,9 @@ Route::get('/search', [SearchController::class, 'search'])->name('search');
 Route::get('/products', [ProductController::class, 'getData']);
 
 
+Route::get('/role-management', [RoleManagementController::class, 'index'])->name('roleManagement');
+Route::post('/role-management/save', [RoleManagementController::class, 'save'])->name('saveRolesPermissions');
+
+Route::get('/user-management/create', [UserManagementController::class, 'create'])->name('user-management.create');
+Route::post('/user-management/save', [UserManagementController::class, 'store'])->name('user-management.save');
+Route::get('/screenA',  [ScreenTestController::class, 'testScreenA'])->middleware('checkPermission:1,2');
