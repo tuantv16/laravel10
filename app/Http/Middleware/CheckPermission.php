@@ -25,7 +25,7 @@ class CheckPermission
         //comment tạm
         //$userPermissions = $user->role->permissions->pluck('id')->toArray(); // Lấy tất cả id của permissions của user
         $userPermissions = [29]; // = 1 thì có quyền truy cập vào được.
-
+        // Đoạn này có thẻ query trong db bảng  role_permission để check xem có tồn tại role trong bảng này không
         foreach ($permissions as $permission) {
             // Kiểm tra nếu người dùng có quyền cần thiết
             if (in_array($permission, $userPermissions)) {
